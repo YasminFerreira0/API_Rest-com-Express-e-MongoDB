@@ -1,0 +1,5 @@
+REST (representational state transfer ou transferência de estado representacional) representa um padrão para desenvolvimento de APIs web utilizando o protocolo HTTP para transmissão de dados.
+
+API -  É um conjunto de padrões, ferramentas e protocolos que permite que softwares e aplicativos se comuniquem e se integrem. As APIs permitem que dois computadores "entendam" as instruções um do outro, gerando novas instruções a serem realizadas
+
+Criar rotas em uma API, como se conectar e acessar rotas e de que forma as rotas são utilizadas dentro da lógica de uma API REST.
