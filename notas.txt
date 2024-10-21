@@ -13,3 +13,21 @@ Como implementar um CRUD inicial com os métodos HTTP GET, POST, PUT e DELETE, e
 Como testar requisições com Postman e quais são as partes de uma requisição HTTP;
 
 Como utilizar o Express para gerar e enviar respostas adequadas para cada tipo de requisição HTTP.
+
+SQL (Linguagem de Consulta Estruturada) - Uso de tabelas relacionais, são restruturados no formato de tabelas com colunas e linhas. relacionamento entre tabelas
+
+NoSQl (Bancos que nao sao gerenciadores SQL) - Banco de Objetos. São bancos de documentos, facilita o manejo de estruturas mais complexas e ser mais rapido
+
+
+Shema é um objeto de configuração que define a estrutura e as propriedades de um documento.
+
+Modelo é um objeto que representa uma coleção na base de dados.
+
+
+
+Como os bancos de dados atuam integrados a uma API, guardando os dados recebidos e processados pela API;
+Quais são as principais diferenças entre tipos de bancos de dados SQL e NoSQL e alguns casos de uso de cada tipo de banco;
+Como utilizar uma instância gratuita de um banco MongoDB na nuvem através do serviço Mongo Atlas e conectar a instância com a API;
+Os conceitos de model e schema e qual a função de cada na construção de uma API.
+
+

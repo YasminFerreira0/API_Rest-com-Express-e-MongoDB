@@ -1,34 +1,30 @@
 import express from "express";
+import connectBD from "./config/dbConnect.js";
+import livro from "./models/livro.js";
+
+const conexao = await connectBD();
+
+conexao.on("erro", (erro) => {
+    console.error("erro de conexao", erro);
+});
+
+conexao.once("open", () => {
+    console.log("Conexao do Banco realizada com sucesso");
+});
 
 const app = express();
 app.use(express.json());//executa o express.json em todas as requisições que chegam e que sao manejadas pelo express. Converte string para json.
 
 //middleware, utilizado para ter acesso as requisições e respostas, e realizar algumas ações nelas.
 
-const livros = [
-    {
-        id: 1, 
-        titulo: "Hobbit"
-    },
-    {
-        id: 2, 
-        titulo: "Senhor dos Aneis"
-    }
-]
-
-function buscaLivro(id){
-    return livros.findIndex(livro => {
-        return livro.id === Number(id);
-    });
-}
-
 
 app.get("/", (req, res) => {
     res.status(200).send("Curso de NodeJS, API Rest");
 });
 
-app.get("/livros", (req, res) => {
-    res.status(200).json(livros);//jason e uma notação de objeto que tem como referencia um objeto javascript 
+app.get("/livros", async (req, res) => {
+    const listaLivros = await livro.find({});
+    res.status(200).json(listaLivros);//jason e uma notação de objeto que tem como referencia um objeto javascript 
 });
 
 app.get("/livros/:id", (req, res) => {
