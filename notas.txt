@@ -31,3 +31,9 @@ Como utilizar uma instância gratuita de um banco MongoDB na nuvem através do s
 Os conceitos de model e schema e qual a função de cada na construção de uma API.
 
 
+Models
+Os models são responsáveis pela representação dos dados e da lógica de negócio da aplicação, ou seja, é responsabilidade do model gerenciar o relacionamento entre a API e a camada de dados, incluindo validação, armazenamento e manipulação dos dados, interação com a base de dados e suas regras.
+Em nossa API, a conexão entre o model e o banco de dados está sendo feito através dos métodos da biblioteca Mongoose
+
+Controllers
+Os controllers atuam como intermediários entre a camada responsável pelo recebimento dos inputs de dados, que em nossa API está sendo feito através das rotas, e os models. Controllers também são a camada responsável pelo “caminho inverso”, pegando o resultado do processamento feito pelos models e “repassando” de volta.
