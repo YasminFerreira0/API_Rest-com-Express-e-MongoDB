@@ -37,3 +37,7 @@ Em nossa API, a conexão entre o model e o banco de dados está sendo feito atra
 
 Controllers
 Os controllers atuam como intermediários entre a camada responsável pelo recebimento dos inputs de dados, que em nossa API está sendo feito através das rotas, e os models. Controllers também são a camada responsável pelo “caminho inverso”, pegando o resultado do processamento feito pelos models e “repassando” de volta.
+
+A organizar a estrutura do código de um projeto de API utilizando o padrão chamado controller;
+A evoluir as funcionalidades da API organizando as chamadas da lib Mongoose em métodos separados em um controller;
+A praticar a implementação do CRUD (Create, Read, Update e Delete) com as respostas HTTP e as rotas correspondentes.
