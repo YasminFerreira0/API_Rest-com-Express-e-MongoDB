@@ -41,3 +41,30 @@ Os controllers atuam como intermediários entre a camada responsável pelo receb
 A organizar a estrutura do código de um projeto de API utilizando o padrão chamado controller;
 A evoluir as funcionalidades da API organizando as chamadas da lib Mongoose em métodos separados em um controller;
 A praticar a implementação do CRUD (Create, Read, Update e Delete) com as respostas HTTP e as rotas correspondentes.
+
+Em bancos SQL, a avaliação de requisitos e modelagem dos dados costuma ser feita de forma adiantada com relação à aplicação, pois o SQL é, por definição, mais “estrito” com relação à estrutura de um banco, aos tipos de dados associados a cada campo e ao relacionamento entre as tabelas.
+
+Já em um banco de objetos como o MongoDB, esta estrutura é menos rígida e pode ser atualizada de acordo com as necessidades da aplicação, então, dois documentos livro podem ser diferentes entre si sem que para isso sejam necessárias alterações significativas na base de dados.
+
+Porém, em ambos os tipos de banco existem três tipos de relacionamentos entre dados. São eles:
+
+    Relacionamento “um para um” (one-to-one ou 1:1), quando um registro está conectado a somente outro registro em outro conjunto de dados.
+
+    Relacionamento “um para muitos” (one-to-many ou 1:n), quando um registro pode ser conectado a mais de um registro em outro conjunto de dados.
+
+    Relacionamento “muitos para muitos” (many-to-many ou n:m), quando mais de um registro pode estar relacionado a mais de um registro em outro conjunto. 
+
+Embedding
+Ao contrário do SQL, o MongoDB segue o princípio de “dados que são acessados juntos devem ser armazenados juntos”.
+
+Pensando assim, embedding significa incorporar dados que são relacionados e inseri-los em um documento. É usado para simplificar as consultas (queries) aos dados e melhorar a performance geral das ferramentas nas consultas.
+
+Referencing
+Referencing significa fazer referência a documentos em outra coleção. Nesse caso, os dados são guardados em coleções separadas, mas ainda é importante que mantenham vínculo entre eles. A referência é feita através de um campo específico do documento, normalmente o campo id ou equivalente.
+
+A agregação de dados via reference visa evitar duplicação de dados (um aspecto muito importante no SQL, também chamada de “normalização de dados”) e também gerenciar o tamanho dos documentos para evitar a criação de documentos muito grandes, que prejudicariam a performance do sistema.
+
+
+A evoluir as funcionalidades de uma API, unindo diferentes entidades como livro e autor;
+Como funciona o relacionamento em um banco de objetos como MongoDB utilizando o modelo de embedding;
+Como realizar buscas em API via parâmetros de query.
