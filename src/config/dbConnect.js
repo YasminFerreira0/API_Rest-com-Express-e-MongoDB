@@ -6,4 +6,4 @@ async function connectBD() {
     return mongoose.connection;
 }
 
-export default connectBD;
+export default connectBD; 
